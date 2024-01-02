@@ -44,3 +44,15 @@ Visualize bboxes on videos
 (4) Visualize detected images: `coco/vis_det_each.sh`
 
 (5) Merge images to video: `video/image2video.py`
+
+# dense_3d2d
+
+Obtain 2d coco annotations from the DENSE dataset
+
+(1) Get coco-format jsons with 2D bboxes: `dense_3d2d/gen_coco.py`
+
+(2) Visualize 2D bboxes for debug: `dense_3d2d/vis_many.py`
+
+(3) Count the occurence for each category: `dense_3d2d/count_category.py`
+
+(4) Split into train/test based on ratio and tod constraints: `dense_3d2d/train_test_split.py`
