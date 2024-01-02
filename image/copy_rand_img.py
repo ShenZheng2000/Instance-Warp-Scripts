@@ -2,6 +2,8 @@ import os
 import random
 import shutil
 
+# Purpose: Copy a random subset of images from one folder to another
+
 # Set random seed
 random.seed(0)
 

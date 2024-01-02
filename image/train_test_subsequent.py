@@ -1,6 +1,8 @@
 import os
 import shutil
 
+# Purpose: Split images into train and test sets
+
 # Define the path to the input folder with images
 input_folder = "/home/aghosh/Projects/2PCNet/Datasets/boreas/filtered"
 

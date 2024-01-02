@@ -1,6 +1,8 @@
 import json
 import os
 
+# Purpose: Create an json file with ONLY valid vanishing points
+
 dataset_path = "/home/aghosh/Projects/2PCNet/Datasets"
 # base_name = "train_day"
 # task_name = "val_night"

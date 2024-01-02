@@ -2,6 +2,8 @@ import os
 import json
 import shutil
 
+# Purpose: Filter images in a folder based on a JSON file
+
 # Function to read Coco format JSON file and get the list of image filenames
 def read_json_file(json_file_path):
     with open(json_file_path, 'r') as f:

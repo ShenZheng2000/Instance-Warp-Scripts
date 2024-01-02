@@ -3,6 +3,8 @@ import os
 import sys
 from PIL import Image
 
+# Purpose: Create an empty JSON file for COCO-style annotations
+
 # Define the structure of the JSON file
 coco_data = {
     "info": {},
@@ -65,15 +67,6 @@ coco_data = {
 }
 
 
-# Define the path to the unlabelled dataset B folder containing images
-# split = sys.argv[1]
-# images_folder = f"/home/aghosh/Projects/2PCNet/Datasets/boreas/images/{split}"  # Replace with the actual path
-# output_json_path = f"/home/aghosh/Projects/2PCNet/Datasets/boreas/coco_labels/{split}_snowy.json"  # Replace with desired output path
-
-# weather = 'rainy'
-# # time = 'day'
-# time = 'night'
-
 weather = 'foggy'
 time = 'day'
 
@@ -107,25 +100,3 @@ for subdir, dirs, files in os.walk(images_folder):
 with open(output_json_path, "w") as f:
     json.dump(coco_data, f, indent=4)
 
-
-
-
-# # Loop through all the image files in the folder
-# for filename in os.listdir(images_folder):
-#     if filename.endswith(".jpg") or filename.endswith(".png"):
-#         # Get the image size
-#         img_path = os.path.join(images_folder, filename)
-
-#         # Open the image and get its size
-#         with Image.open(img_path) as img:
-#             width, height = img.size
-
-#         # Add the image information to the JSON file
-#         image_id = len(coco_data["images"]) + 1
-#         image_info = {
-#             "id": image_id,
-#             "file_name": filename,
-#             "height": height,
-#             "width": width
-#         }
-#         coco_data["images"].append(image_info)

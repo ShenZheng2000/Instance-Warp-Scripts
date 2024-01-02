@@ -1,5 +1,7 @@
 import os
 
+# Purpose: Write the basenames of all images in a folder to a text file
+
 # Define the path to your folder of images and the output text file
 image_folder = '/home/aghosh/Projects/2PCNet/Datasets/bdd100k/images/100k/Rainy_bad'
 output_file = '/home/aghosh/Projects/2PCNet/Scripts/bdd/val/rainy_100.txt'

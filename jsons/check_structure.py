@@ -1,5 +1,7 @@
 import json
 
+# Purpose: explore the structure of a JSON file
+
 # src_file = "/home/aghosh/Projects/2PCNet/Datasets/bdd100k_ori/labels/det_20/det_val_coco.json"
 # src_file = "/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_night.json"
 src_file = "/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_day.json"

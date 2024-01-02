@@ -4,6 +4,8 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
+# Purpose: Plot the histogram of bounding box areas, and visualize the area thresholds
+
 dataset = sys.argv[1]
 
 if dataset == 'synthia':

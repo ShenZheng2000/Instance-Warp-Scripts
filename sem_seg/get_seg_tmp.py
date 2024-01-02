@@ -5,6 +5,8 @@ import json
 import glob
 from tqdm import tqdm
 
+# Purpose: Convert the instance segmentation ground truth from Synthia to COCO format
+
 # Path to the folder containing images
 folder_path = "/home/aghosh/Projects/2PCNet/Datasets/synthia/RGB"
 

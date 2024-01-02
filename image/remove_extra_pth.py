@@ -1,5 +1,6 @@
 import os
 
+# Purpose: Remove all .pth files except for 'instances_predictions.pth' and 'model_final.pth'
 
 def remove_non_model_final_pth(directory, excluded_folder, debug_mode):
 

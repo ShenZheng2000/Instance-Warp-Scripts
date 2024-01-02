@@ -1,5 +1,7 @@
 # NOTE: modified from DAFormer/mmseg/models/utils/visualization.py
 
+# Purpose: Convert gray semantic label images to colorized images
+
 import numpy as np
 import torch
 from matplotlib import pyplot as plt

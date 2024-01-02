@@ -1,6 +1,8 @@
 import cv2
 import os
 
+# Purpose: Resize all images in a directory to a specified size
+
 def resize_images(source_directory, destination_directory, width=1280, height=720):
     if not os.path.exists(destination_directory):
         os.makedirs(destination_directory)

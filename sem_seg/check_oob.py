@@ -1,3 +1,5 @@
+# Purpose: Check if any bounding boxes are out of bounds
+
 
 image_width = 1024
 image_height = 512

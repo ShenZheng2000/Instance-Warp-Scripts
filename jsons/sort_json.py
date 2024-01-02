@@ -1,6 +1,8 @@
 import json
 import os
 
+# Purpose: filter OUT images not in clear.txt
+
 # Step 1: Read the txt file
 with open("/home/aghosh/Projects/2PCNet/Scripts/bdd/train/clear.txt", "r") as txt_file:
     filenames = [line.strip() for line in txt_file]

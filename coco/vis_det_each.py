@@ -5,7 +5,60 @@ import os
 import numpy as np
 import sys
 
-from vis_det import iou, apply_nms
+def iou(box1, box2):
+    x1, y1, w1, h1 = box1
+    x2, y2, w2, h2 = box2
+
+    # Determine the coordinates of the intersection rectangle
+    x_left = max(x1, x2)
+    y_top = max(y1, y2)
+    x_right = min(x1 + w1, x2 + w2)
+    y_bottom = min(y1 + h1, y2 + h2)
+
+    # If the boxes do not intersect, return 0
+    if x_right < x_left or y_bottom < y_top:
+        return 0.0
+
+    # Compute the area of intersection rectangle
+    intersection_area = (x_right - x_left) * (y_bottom - y_top)
+
+    # Compute the area of both rectangles
+    box1_area = w1 * h1
+    box2_area = w2 * h2
+
+    # Compute the IOU
+    iou = intersection_area / float(box1_area + box2_area - intersection_area)
+
+    return iou
+
+
+def apply_nms(boxes, iou_thresh):
+    """
+    Applies non-maximum suppression (NMS) to the input boxes.
+
+    Args:
+        boxes (list): A list of dictionaries, each representing a bounding box and its score.
+            Each dictionary has the following keys:
+                - bbox (list): A list of 4 integers representing the box coordinates (x, y, width, height).
+                - score (float): The score/confidence of the box.
+        iou_thresh (float): The IoU threshold to use for NMS.
+
+    Returns:
+        A list of dictionaries representing the boxes after NMS has been applied. Each dictionary has the same keys
+        as the input dictionaries.
+    """
+    # Sort boxes by their score in descending order
+    boxes = sorted(boxes, key=lambda x: x['score'], reverse=True)
+
+    # Initialize the list of selected boxes and loop over all the boxes
+    selected_boxes = []
+    for box in boxes:
+        # Check if the current box overlaps with any of the selected boxes above the IoU threshold
+        if not any(iou(box['bbox'], sel_box['bbox']) > iou_thresh for sel_box in selected_boxes):
+            selected_boxes.append(box)
+
+    return selected_boxes
+
 
 img_folder = sys.argv[1] # images
 label_file = sys.argv[2] # bbox.json in bdd format

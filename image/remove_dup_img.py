@@ -2,6 +2,8 @@ import os
 import shutil
 import sys
 
+# Purpose: Remove duplicate images from folder B if they exist in folder A
+
 def remove_duplicates(folder_a_path, folder_b_path):
     folder_a_files = set(os.listdir(folder_a_path))
     folder_b_files = os.listdir(folder_b_path)

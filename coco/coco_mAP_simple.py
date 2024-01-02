@@ -2,6 +2,7 @@ from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 import sys
 
+# Purpose: compute categorical mAP using detectron2-style json file
 
 def coco_mAP_dif(results_json, gt_json, model_name=None, tod=None):
 
@@ -65,56 +66,6 @@ def coco_mAP_dif(results_json, gt_json, model_name=None, tod=None):
     print(f"Results saved to {output_file_path}")
 
 
-# model_name = "acdc_11_6_baseline"
-# model_name = "acdc_11_6_bbox"
-# model_name = "acdc_11_6_fovea"
-# model_name = "acdc_11_6_tpp"
-
-# results_json = f"/home/aghosh/Projects/2PCNet/Methods/Night-Object-Detection/outputs/{model_name}/inference/coco_instances_results.json"
-# gt_json = "/home/aghosh/Projects/2PCNet/Datasets/acdc/gt_detection/val.json"
-
-# tods = [
-#         # "day", 
-#         # "clear"
-#         # "day_bad_weather",
-#         "clear_night"
-#         ]
-
-# for tod in tods:
-#     if tod == "day":
-#         model_names = [
-#             "pretrained",
-#             "warp_aug_9_12",
-#             "warp_aug_8_2",
-#             "bdd100k_9_22_v1"
-#         ]
-#     elif tod == "clear":
-#         model_names = [
-#             "bdd100k_10_18_baseline",
-#             "bdd100k_10_18_fovea",
-#             "bdd100k_10_18_tpp",
-#             "bdd100k_10_18_bbox"
-#         ]
-#     elif tod == 'day_bad_weather':
-#         model_names = [
-#             "pretrained",
-#             "bdd100k_9_22_v1"
-#         ]
-#     elif tod == 'clear_night':
-#         model_names = [
-#             "bdd100k_10_18_baseline",
-#             "bdd100k_10_18_bbox"
-#         ]
-#     else:
-#         model_names = []  # Add model names for other 'tod' values if needed
-
-#     for model_name in model_names:
-#         results_json = f"/home/aghosh/Projects/2PCNet/Methods/Night-Object-Detection/outputs/{model_name}/{tod}/inference/coco_instances_results.json"
-#         gt_json = f"/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_{tod}.json"
-
-#         coco_mAP_dif(results_json, gt_json, model_name=model_name, tod=tod)
-
-
 # For all experiments: [model_names, tod]
     # 2PCNet (clear to dense foggy)                 [dense_foggy_12_12_baseline, dense_foggy]
     # 2PCNet + DehazeFormer (clear to dense foggy)  [dense_foggy_12_12_baseline, dense_foggy_dehazeformer]
@@ -156,7 +107,6 @@ model_names = [
 
 for model_name in model_names:
         
-        # TODO: do this separate due to label mismatch
         if model_name == "dense_foggy_12_12_baseline":
             tods = ["dense_foggy",
                     "dense_foggy_dehazeformer"]

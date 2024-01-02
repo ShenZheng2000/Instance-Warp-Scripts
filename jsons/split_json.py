@@ -1,4 +1,4 @@
-# Purpose: split one json file into multiple json files
+# Purpose: split one json file into multiple json files based on give txt files
 import json
 
 # Function to read image names from a text file into a set

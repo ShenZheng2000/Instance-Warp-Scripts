@@ -3,6 +3,8 @@ import cv2
 from glob import glob
 import argparse
 
+# Purpose: Resize all images in a directory to a specified size
+
 # Argument parsing
 parser = argparse.ArgumentParser(description='Reshape images')
 parser.add_argument('--src', type=str, required=True, help='Directory to perform in-place image resize')

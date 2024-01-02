@@ -3,6 +3,8 @@ import numpy as np
 import cv2
 from sklearn.cluster import KMeans
 
+# Purpose: Visualize vanishing points and calculate statistics
+
 def read_vanishing_points(file_path):
     with open(file_path, "r") as f:
         vanishing_points_data = json.load(f)

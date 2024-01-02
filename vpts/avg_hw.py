@@ -1,5 +1,7 @@
 import json
 
+# Purpose: calculate the average width and height of the vanishing points in the JSON file
+
 # Load the JSON file
 json_file_path = "/home/aghosh/Projects/2PCNet/Datasets/VP/train_day.json"  # Replace with the actual path to your JSON file
 with open(json_file_path, 'r') as json_file:

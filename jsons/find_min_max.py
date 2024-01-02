@@ -1,5 +1,7 @@
 import json
 
+# Purpose: find min and max values of bounding boxes in a JSON file
+
 src = '/home/aghosh/Projects/2PCNet/Methods/Night-Object-Detection/outputs/bdd100k_fovea_05x/inference/coco_instances_results.json'
 
 # Load JSON data from a file

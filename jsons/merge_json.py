@@ -1,8 +1,7 @@
 import json
 import os
 
-import json
-import os
+# Purpose: Merge multiple JSON files into one
 
 # Paths to source JSON files
 src_jsons = [

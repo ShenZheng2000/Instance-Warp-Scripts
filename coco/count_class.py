@@ -2,6 +2,8 @@ import json
 from collections import defaultdict
 from tabulate import tabulate
 
+# Purpose: count the number of instances per category in a COCO format JSON file
+
 # Load the COCO format JSON file
 # coco_json_file = '/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/bdd100k_labels_images_train.json'
 coco_json_file = '/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/bdd100k_labels_images_val.json'

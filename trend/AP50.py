@@ -6,7 +6,6 @@ import datetime
 import sys
 from matplotlib.ticker import MultipleLocator
 
-# TODO: put the font below the point
 
 # Function to convert year-month to datetime
 def convert_to_datetime(year, month):
@@ -83,84 +82,3 @@ plt.grid(True)
 # plt.savefig(f'{scores}.png')
 plt.savefig(f'{scores}.pdf')
 # plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# import matplotlib.pyplot as plt
-# from matplotlib.ticker import MaxNLocator
-# import sys
-
-# # use year-month format,
-# # remove legend, and move method name near points
-# # Maybe: use same points and color for some methods
-
-# scores = sys.argv[1]
-
-# if scores == 'mAP50':
-
-#     # Provided data for AP50 values with different methods and their publication years
-#     data = {
-#         'UMT': (36.2, 2021),  # CVPR 2021 (Date: Mar 2020)
-#         'TDD': (34.6, 2022),  # CVPR 2022 (Date: May 2022)
-#         'AT': (38.5, 2022),   # CVPR 2022 (Date: Nov 2021)
-#         '2PCNet': (46.7, 2023), # CVPR 2023 (Date: Mar 2023)
-#         'Ours': (50.1, 2024)  # Date: Nov 2023
-#     }
-
-# elif scores == 'mIoU':
-#     data = {
-#     'FDA': (45.7, 2020), # CVPR 2020 (Date: Apr 2020)
-#     'MGCDA': (48.7, 2020), # TPAMI 2020  (Date: May 2020)
-#     'DANNet': (50.0, 2021), # CVPR 2021  (Date: Apr 2021)
-#     'DAFormer': (57.6, 2022), # CVPR 2022  (Date: Mar 2022)
-#     'Our': (61.8, 2024) # Date: Nov 2023
-#     }
-
-# else:
-#     data = {
-#     }
-
-
-# # Splitting the data into separate lists for plotting
-# models = list(data.keys())
-# values = [val[0] for val in data.values()]
-# years = [val[1] for val in data.values()]
-
-# # Define custom colors and point shapes
-# colors = ["#ff7f00", "#984ea3", "#4daf4a", "#377eb8", "#e41a1c"]
-# point_shapes = ["^", "s", "p", "o", "*"]
-
-# # Plotting the data with custom colors and point shapes
-# plt.figure(figsize=(10, 8))
-# for i, (model, value, year) in enumerate(zip(models, values, years)):
-#     plt.scatter(year, value, label=model, s=1300, color=colors[i], marker=point_shapes[i])
-
-# # Setting the size of the legend
-# plt.legend(prop={'size': 30},
-#            loc = 'best'
-#         #    loc='lower right'
-#            )
-
-# # Adjusting the x-axis to show only integer year values
-# plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True))
-
-# plt.xticks(fontsize=25)
-# plt.yticks(fontsize=25)
-
-# plt.xlabel('Year', fontsize=35)
-# plt.ylabel(f'{scores}', fontsize=35)
-# plt.tight_layout()
-# plt.savefig(f'{scores}.png')  # Uncomment this line to save the figure as a file
-# # plt.savefig(f'{scores}.pdf')  # Uncomment this line to save the figure as a file
-# # plt.show()

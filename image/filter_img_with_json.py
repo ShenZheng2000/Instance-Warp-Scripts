@@ -2,6 +2,8 @@ import os
 import json
 import shutil
 
+# Purpose: Copy images from a folder to another folder conditioned on a JSON file
+
 # Define the paths to the input folder with images, COCO JSON file, and the output folder
 image_folder = "/home/aghosh/Projects/2PCNet/Datasets/dense/cam_stereo_left_lut"
 coco_json_file = "/home/aghosh/Projects/2PCNet/Datasets/dense/coco_labels/val_dense_fog.json"

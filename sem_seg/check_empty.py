@@ -1,5 +1,7 @@
 import json
 
+# Purpose: check if there are any empty bounding boxes in a JSON file
+
 # Load the JSON file
 with open('/home/aghosh/Projects/2PCNet/Datasets/cityscapes_seg2det.json', 'r') as json_file:
     data = json.load(json_file)

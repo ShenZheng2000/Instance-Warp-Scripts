@@ -1,5 +1,7 @@
 import json
 
+# Purpose: count vanishing points both oob, one oob, none oob
+
 def count_vanishing_points_status(data, image_width, image_height):
     both_oob_count = 0
     one_oob_count = 0

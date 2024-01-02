@@ -2,6 +2,8 @@ import os
 from PIL import Image
 import sys
 
+# Purpose: Check the resolution of all images in a folder
+
 def check_image_resolution(path):
     for root, dirs, files in os.walk(path):
         for file in files:

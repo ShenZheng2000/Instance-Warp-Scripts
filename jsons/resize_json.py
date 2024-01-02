@@ -2,6 +2,8 @@ import json
 import sys
 import os
 
+# Purpose: Resize bboxes in COCO formatted JSON files
+
 # Folder path containing the JSON files
 folder_path = sys.argv[1]
 

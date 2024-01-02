@@ -4,6 +4,8 @@ import os
 from matplotlib import pyplot as plt
 from matplotlib.colors import TwoSlopeNorm
 
+# Purpose: pick images showing greatest difference for visual comparison
+
 def load_images(folder, is_gt=False, is_cs=False):
     if is_gt:
         if is_cs:

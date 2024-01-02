@@ -3,6 +3,8 @@ import numpy as np
 import os
 import sys
 
+# Purpose: Compute the average MSE between two images
+
 def compute_image_difference(image1_path, image2_path):
     image1 = Image.open(image1_path)
     image2 = Image.open(image2_path)

@@ -2,9 +2,7 @@ import cv2
 import json
 import os
 
-
-import cv2
-import numpy as np
+# Purpose: Draw a blurred dot at the vanishing point of an image
 
 # Define the path to the JSON file containing vanishing point coordinates
 vanishing_points_file = "/home/aghosh/Projects/2PCNet/Datasets/VP/bdd100k_all_vp.json"

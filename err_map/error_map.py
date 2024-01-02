@@ -4,6 +4,8 @@ import os
 from matplotlib import pyplot as plt
 from matplotlib.colors import TwoSlopeNorm
 
+# Purpose: Compute the per-pixel acc. dif. between two folders of images
+
 def load_images(folder, is_gt=False, is_cs=False):
     if is_gt:
         if is_cs:
@@ -43,36 +45,6 @@ def get_average_score(predicted_map_path, gt_map_path, dataset = 'cityscapes', r
 
     predicted_maps = sorted(predicted_maps, key=lambda x: "_".join(x.split('_')[:-2]))
     gt_maps = sorted(gt_maps, key=lambda x: "_".join(x.split('_')[:-2]))
-
-    # print("len(predicted_maps): ", len(predicted_maps))
-    # print("len(gt_maps): ", len(gt_maps))
-    # exit()
-
-    # car_bgr_color = car_rgb_color[::-1]  # Convert RGB to BGR
-    # gt through each image, and read the image
-
-    # scores = np.zeros_like(cv2.imread(predicted_maps[0], cv2.IMREAD_GRAYSCALE), dtype=np.float32)
-
-    # scores = np.zeros((1080, 1920), dtype=np.float32)
-
-    # import numpy.ma as ma
-
-    # # This is for rgb colors
-    # for i in range(len(predicted_maps)):
-    #     pred_map = cv2.imread(predicted_maps[i])
-    #     gt_map = cv2.imread(gt_maps[i])
-
-    #     mask = np.all(gt_map != car_bgr_color, axis=2)
-    #     mask = np.stack([mask, mask, mask], axis=2)
-
-    #     gt_masked = ma.masked_array(gt_map, mask=mask)
-    #     pred_masked = ma.masked_array(pred_map, mask=mask)
-    #     # car_idx = np.where(np.all(gt_map == car_bgr_color, axis=-1))
-    #     # gt_map[car_idx[0], car_idx[1], :] = (0, 0, 0)
-    #     # pred_map[car_idx[0], car_idx[1], :] = (0, 0, 0)
-
-    #     scores += np.all(pred_masked == gt_masked, axis=2)
-        # scores += np.all(pred_map[car_idx] == gt_map[car_idx], axis=2)
 
     scores = None
 

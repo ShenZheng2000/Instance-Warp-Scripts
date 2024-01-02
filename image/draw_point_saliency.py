@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import torch
 
+# Purpose: Draw points on saliency maps
+
 # Coordinates as tensors
 points = [
     torch.tensor([[392.2950, 393.7193]]), # Top (red)

@@ -5,8 +5,8 @@ import glob
 import json
 import sys
 
-# NOTE: for synthia, preconvert gray to color using this script: /home/aghosh/Projects/2PCNet/Scripts/sem_seg/gray_to_color.py
-# NOTE: for synthia gt, use get_seg_tmp.py
+# NOTE: for synthia images, preconvert gray to color using this script: /home/aghosh/Projects/2PCNet/Scripts/sem_seg/gray_to_color.py
+# NOTE: for synthia gt, use get_seg_tmp.py!!!!!
 
 '''
 The expected structure in json file
@@ -20,38 +20,6 @@ The expected structure in json file
     ...
 }
 '''
-
-
-# NOTE: no use for now, we can use cityscapes palette!
-# def synthia_classes():
-#     return [
-#         'Sky', 'Building', 'Road', 'Sidewalk', 'Fence', 'Vegetation', 
-#         'Pole', 'Car', 'Sign', 'Pedestrian', 'Cyclist'
-#     ]
-
-# # TODO: first debug if baseline can run
-# # TODO: then debug how to get pseudo bboxes 
-# def synthia_palette():
-#     return [
-#         [128, 128, 128],  # Sky (Grey)
-#         [128, 0, 0],     # Building (Red)
-#         [128, 64, 128],  # Road (Pink)
-#         [0, 0, 192],     # Sidewalk (Blue)
-#         [64, 64, 128],   # Fence (Grey-purple)
-#         [128, 128, 0],   # Vegetation (Dark yellow)
-#         [192, 192, 128], # Pole (Light yellow)
-#         [64, 0, 128],    # Car (Purple)
-#         [192, 128, 128], # Sign (Salmon)
-#         [64, 64, 0],     # Pedestrian (Yellow-brown)
-#         [0, 128, 192]    # Cyclist (Light blue)
-#     ]
-
-# def get_synthia_foreground_classes():
-#     # Define foreground classes based on your understanding or domain knowledge
-#     return [
-#             'Car', 'Sign', 'Pedestrian', 'Cyclist'
-#             ]
-
 
 def get_classes():
     return cityscapes_classes()

@@ -1,6 +1,8 @@
 import shutil
 import os
 
+# Purpose: Copy images from a folder to another folder conditioned on a text file
+
 # Function to copy files from source to target if they exist in a given text file list
 def copy_images_from_list(txt_file, source_folder, target_folder):
     # Create target folder if it doesn't exist

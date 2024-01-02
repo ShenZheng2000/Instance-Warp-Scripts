@@ -1,4 +1,4 @@
-# Purpose: split bdd images accordig to weather and time of day
+# Purpose: split bdd images based on weather and time of day
 
 import json
 from collections import defaultdict

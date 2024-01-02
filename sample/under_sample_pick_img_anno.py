@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 import os
 import shutil
 
+# Purpose: Create a balanced subset of images from the Cityscapes dataset
+
 COUNT = 250 # 250 for 25%
 # COUNT = 500 # 500 for 50%
 
