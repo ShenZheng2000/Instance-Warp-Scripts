@@ -1,6 +1,10 @@
 # Utility Scripts
 
-This repository contains utility scripts used in our image warping research. 
+This repository hosts utility scripts for image warping research. 
+
+Key files are summarized in this readme
+
+Consult the python files in each subfolder for further details.
 
 # bdd
 
