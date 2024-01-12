@@ -3,9 +3,8 @@ import sys
 
 # Purpose: filter coco json based on txt files
 # Parameters:
-    # coco_file (str): The path to the COCO formatted json file to be filtered.
-    # filenames_txt (str): The path to the text file containing the list of filenames to be used for filtering.
-    # output_file (str): The path to the output COCO formatted json file.
+    # split: train/val
+    # weather: clear.txt, rainy.txt, etc.
 # Commands:
     # python filter_file.py $split $weather
 
