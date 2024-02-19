@@ -73,7 +73,8 @@ if __name__ == "__main__":
 
     # Load source and target datasets
     source_json_path = '/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_rainy.json'
-    target_json_path = f'/home/aghosh/Projects/2PCNet/Datasets/acdc/gt_detection/{wea_tod}/instancesonly_{wea_tod}_{train_or_val}_gt_detection.json'
+    # target_json_path = f'/home/aghosh/Projects/2PCNet/Datasets/acdc/gt_detection/{wea_tod}/instancesonly_{wea_tod}_{train_or_val}_gt_detection.json'
+    target_json_path = '/home/aghosh/Projects/2PCNet/Datasets/Argoverse/Argoverse-HD/annotations/minival.json'
     source_data = load_json(source_json_path)
     target_data = load_json(target_json_path)
 
@@ -95,7 +96,8 @@ if __name__ == "__main__":
     # target_data["images"] = update_images(target_data["images"])
 
     # Save the modified target dataset as a new JSON file
-    save_path = f'/home/aghosh/Projects/2PCNet/Datasets/acdc/gt_detection/{train_or_val}_{wea_tod}.json'
+    # save_path = f'/home/aghosh/Projects/2PCNet/Datasets/acdc/gt_detection/{train_or_val}_{wea_tod}.json'
+    save_path = '/home/aghosh/Projects/2PCNet/Datasets/Argoverse/Argoverse-HD/coco_labels/minival.json'
     print(f"Saving updated dataset to {save_path}")
     save_json(target_data, save_path)
 

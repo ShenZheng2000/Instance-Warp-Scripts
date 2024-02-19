@@ -4,7 +4,8 @@ import json
 
 # src_file = "/home/aghosh/Projects/2PCNet/Datasets/bdd100k_ori/labels/det_20/det_val_coco.json"
 # src_file = "/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_night.json"
-src_file = "/home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_day.json"
+src_file = "/home/aghosh/Projects/2PCNet/Methods/Construct/LAVIS/backups/captions_val2014.json"
+# src_file = "/longdata/anurag_storage/workzone_segm/workzone_cleaned/roadbotics-jacksonville/annotations/instances_caption.json"
 
 def explore_keys(data, prefix=""):
     if isinstance(data, dict):
