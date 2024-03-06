@@ -21,8 +21,13 @@ def explore_keys(data, prefix=""):
         # Only explore the first item in the list for brevity
         explore_keys(data[0], prefix + "[0] -> ")
 
+        print("data[0]", data[0])
+        print("data[1]", data[1])
+        print("data[2]", data[2])
+
 # Load the JSON file
 with open(src_file, 'r') as f:
     coco_data = json.load(f)
+
 
 explore_keys(coco_data)

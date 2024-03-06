@@ -43,6 +43,6 @@ def merge_coco_json(file_path1, file_path2, merged_file_path):
     save_json(merged_coco, merged_file_path)
 
 # Example usage
-merge_coco_json('/home/aghosh/Projects/2PCNet/Datasets/data/annotations/geographic_da/instances_pretrain.json',
-                 '/home/aghosh/Projects/2PCNet/Datasets/data/annotations/geographic_da/instances_unsupervised_with_gt.json', 
-                 '/home/aghosh/Projects/2PCNet/Datasets/data/annotations/geographic_da/instances_all.json')
+merge_coco_json('/longdata/anurag_storage/workzone_segm/data_new/annotations/instances_geographic_da_pretrain.json',
+                 '/longdata/anurag_storage/workzone_segm/data_new/annotations/instances_geographic_da_unsupervised_with_gt.json', 
+                 '/longdata/anurag_storage/workzone_segm/data_new/annotations/instances_geographic_da_all.json')

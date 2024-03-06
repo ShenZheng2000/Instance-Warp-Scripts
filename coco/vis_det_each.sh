@@ -12,10 +12,10 @@
 #     /home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_night.json
 
 # # # Ours (clear2rainy)
-# python vis_det_each.py \
-#     /home/aghosh/Projects/2PCNet/Datasets/bdd100k/images/100k/val \
-#     /longdata/anurag_storage/2PCNet/2PCNet/outputs_11_14_det_ckpts/bdd100k_10_18_bbox/rainy/inference/coco_instances_results.json \
-#     /home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_rainy.json
+python vis_det_each.py \
+    /home/aghosh/Projects/2PCNet/Datasets/bdd100k/images/100k/val \
+    /longdata/anurag_storage/2PCNet/2PCNet/outputs/bdd100k_10_18_bbox/rainy/inference/coco_instances_results.json \
+    /home/aghosh/Projects/2PCNet/Datasets/bdd100k/coco_labels/val_rainy.json
 
 # # Baseline (clear2rainy)
 # python vis_det_each.py \
@@ -79,14 +79,14 @@
 #     /home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/bdd100k_10_18_bbox/gm_rainy_night/inference/coco_instances_results.json \
 #     /home/aghosh/Projects/2PCNet/Datasets/gm/coco_labels/rainy_night.json
 
-# gm foggy day baseline
-python vis_det_each.py \
-    /home/aghosh/Projects/2PCNet/Datasets/gm/foggy/day/images \
-    /home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/dense_foggy_12_12_baseline/gm_foggy_day/inference/coco_instances_results.json \
-    /home/aghosh/Projects/2PCNet/Datasets/gm/coco_labels/foggy_day.json
+# # gm foggy day baseline
+# python vis_det_each.py \
+#     /home/aghosh/Projects/2PCNet/Datasets/gm/foggy/day/images \
+#     /home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/dense_foggy_12_12_baseline/gm_foggy_day/inference/coco_instances_results.json \
+#     /home/aghosh/Projects/2PCNet/Datasets/gm/coco_labels/foggy_day.json
 
-# gm foggy day ours
-python vis_det_each.py \
-    /home/aghosh/Projects/2PCNet/Datasets/gm/foggy/day/images \
-    /home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/dense_foggy_12_12_bbox/gm_foggy_day/inference/coco_instances_results.json \
-    /home/aghosh/Projects/2PCNet/Datasets/gm/coco_labels/foggy_day.json
+# # gm foggy day ours
+# python vis_det_each.py \
+#     /home/aghosh/Projects/2PCNet/Datasets/gm/foggy/day/images \
+#     /home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/dense_foggy_12_12_bbox/gm_foggy_day/inference/coco_instances_results.json \
+#     /home/aghosh/Projects/2PCNet/Datasets/gm/coco_labels/foggy_day.json

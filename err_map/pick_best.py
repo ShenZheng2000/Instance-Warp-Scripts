@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 import os
 from matplotlib import pyplot as plt
-from matplotlib.colors import TwoSlopeNorm
 
 # Purpose: pick images showing greatest difference for visual comparison
 
@@ -92,28 +91,28 @@ def get_path_from_dataset(dataset):
     assert dataset in ['acdc', 'darkzurich', 'cityscapes'], print("dataset must be one of ['acdc', 'darkzurich', 'cityscapes']")
 
     if dataset == 'cityscapes':
-        pred_map_path_baseline =  "/home/aghosh/Projects/2PCNet/Methods/DAFormer/work_dirs/local-exp80/test_11_11/preds"
+        pred_map_path_baseline =  "/longdata/anurag_storage/2PCNet/DAFormer/work_dirs/local-exp80/test_11_11/preds"
         gt_map_path = "/home/aghosh/Projects/2PCNet/Datasets/cityscapes/gtFine/val"
-        ours_map_path = "/home/aghosh/Projects/2PCNet/Methods/DAFormer/work_dirs/local-exp88/test_11_11/preds"
+        ours_map_path = "/longdata/anurag_storage/2PCNet/DAFormer/work_dirs/local-exp88/test_11_11/preds"
 
     # NOTE: this is for cityscapes to acdc
     elif dataset == 'acdc':
-        pred_map_path_baseline = '/home/aghosh/Projects/2PCNet/Methods/DAFormer/work_dirs/local-exp90/231025_1230_cs2acdc_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_87f3d/preds'
+        pred_map_path_baseline = '/longdata/anurag_storage/2PCNet/DAFormer/work_dirs/local-exp90/231025_1230_cs2acdc_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_87f3d/preds'
         gt_map_path = '/home/aghosh/Projects/2PCNet/Datasets/acdc/gt'
-        ours_map_path = "/home/aghosh/Projects/2PCNet/Methods/DAFormer/work_dirs/local-exp98/231107_0010_cs2acdc_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_119f2/preds"
+        ours_map_path = "/longdata/anurag_storage/2PCNet/DAFormer/work_dirs/local-exp98/231107_0010_cs2acdc_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_119f2/preds"
 
     elif dataset == 'darkzurich':
-        pred_map_path_baseline = "/home/aghosh/Projects/2PCNet/Methods/DAFormer/work_dirs/local-exp80/231025_1229_cs2dzur_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_c4e21/preds/night/GOPR0356"
+        pred_map_path_baseline = "/longdata/anurag_storage/2PCNet/DAFormer/work_dirs/local-exp80/231025_1229_cs2dzur_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_c4e21/preds/night/GOPR0356"
         gt_map_path = "/home/aghosh/Projects/2PCNet/Datasets/dark_zurich/gt/val/night/GOPR0356"
-        ours_map_path = "/home/aghosh/Projects/2PCNet/Methods/DAFormer/work_dirs/local-exp88/231108_0047_cs2dzur_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_d1027/preds/night/GOPR0356"
+        ours_map_path = "/longdata/anurag_storage/2PCNet/DAFormer/work_dirs/local-exp88/231108_0047_cs2dzur_dacs_a999_fdthings_rcs001_cpl_daformer_sepaspp_mitb5_poly10warm_s0_d1027/preds/night/GOPR0356"
 
 
     sorted_scores = compute_scores(ours_map_path, pred_map_path_baseline, gt_map_path, dataset=dataset)
 
     # print("sorted_scores is", sorted_scores)
 
-    print("Top 5 images with highest score:")
-    for i in range(5):
+    print("Top 20 images with highest score:")
+    for i in range(20):
         print(sorted_scores[i])
 
 
@@ -137,7 +136,7 @@ get_path_from_dataset(dataset)
 # ('frankfurt_000001_017459_leftImg8bit.png', 0.01825555165608722)
 # ('frankfurt_000000_011007_leftImg8bit.png', 0.013366063435872433)
 
-# Top5 for ACDC
+# Top10 for ACDC
 # ('GP020607_frame_000149_rgb_anon.png', 0.30357622813786006)
 # ('GP020607_frame_000162_rgb_anon.png', 0.27069235468106995)
 # ('GOPR0606_frame_000202_rgb_anon.png', 0.2650567451131688)

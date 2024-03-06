@@ -64,6 +64,7 @@ for model_name in model_names:
 
     results_json = f"/home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/{model_name}/inference/coco_instances_results.json"
 
-    gt_json = f"/home/aghosh/Projects/2PCNet/Datasets/data/annotations/geographic_da/instances_test.json"
+    # gt_json = f"/home/aghosh/Projects/2PCNet/Datasets/data/annotations/geographic_da/instances_test.json"
+    gt_json = f"/longdata/anurag_storage/workzone_segm/data_new/annotations/instances_geographic_da_test.json"
 
     coco_mAP_dif(results_json, gt_json, model_name=model_name, tod='')

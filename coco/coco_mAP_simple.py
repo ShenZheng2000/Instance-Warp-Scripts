@@ -97,8 +97,10 @@ def coco_mAP_dif(results_json, gt_json, model_name=None, tod=None):
 
 
 model_names = [
-    "dense_foggy_12_12_baseline",
-    "dense_foggy_12_12_bbox",
+    # "dense_foggy_12_12_baseline",
+    # "dense_foggy_12_12_bbox",
+    "dense_foggy_12_12_fovea",
+    "dense_foggy_12_12_tpp",
     # "pretrained",
     # "bdd100k_9_22_v1",
     # "bdd100k_10_18_baseline",
@@ -110,7 +112,7 @@ for model_name in model_names:
         if model_name == "dense_foggy_12_12_baseline":
             tods = ["dense_foggy",
                     "dense_foggy_dehazeformer"]
-        elif model_name == "dense_foggy_12_12_bbox":
+        elif model_name == "dense_foggy_12_12_bbox" or model_name == "dense_foggy_12_12_fovea" or model_name == "dense_foggy_12_12_tpp":
             tods = ["dense_foggy"]
         elif model_name == "pretrained":
             tods = [
@@ -144,7 +146,8 @@ for model_name in model_names:
                     ]
             
         for tod in tods:
-            results_json = f"/home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/{model_name}/{tod}/inference/coco_instances_results.json"
+            # results_json = f"/home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/{model_name}/{tod}/inference/coco_instances_results.json"
+            results_json = f"/home/aghosh/Projects/2PCNet/Methods/Instance-Warp/Night-Object-Detection/outputs/{model_name}/inference/coco_instances_results.json"
 
             # remove SAPNet or SGZ to get tod_new to match gt_json file
             tod_new = tod.replace("SGZ", "night").replace("_SAPNet", "")
